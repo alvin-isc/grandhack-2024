@@ -42,7 +42,7 @@ IRIS now has a langchain integration as a VectorDB! In this demo, we use the lan
 IRIS now has a llama_index integration as a VectorDB! In this demo, we use the llama_index framework with IRIS to ingest and search through a document. 
 
 ## Which to use?
-If you need to use hybrid search (similarity search with other columns), use IRIS SQL. 
+If you need to use similarity search in combination with filtering by other data attributes, use IRIS SQL. For example, if you have data that has discrete attributes in addition to the unstructured content, such as tweets with attributes such as author and date, you may want to only compute similarity on recent tweets -- you can store the tweets in a SQL table and your query can filter by date, _then_ compute similarity.
 
 If you're building a genAI app that uses a variety of tools (agents, chained reasoning, api calls), go for langchain. 
 
